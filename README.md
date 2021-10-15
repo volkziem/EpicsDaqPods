@@ -3,6 +3,10 @@ We describe a system, based on connecting various integrated circuits
 to an ESP01 microcontroller, to flexibly interface analog and digital
 channels to an EPICS control system.
 
+Detailed explanations and schematics are available from
+ - V. Ziemann , *EPICS Data Acquisition Pods*, FREIA Report 2021-04, October 2021
+  (I'll link to it once it's available from the 'official' repository). 
+
 # The pods with sensor connected to ESP01
 
 - Temperature pod
