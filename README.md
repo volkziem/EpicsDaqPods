@@ -31,4 +31,4 @@ Uses a Raspberry Pi that spans its own WLAN network to which the pods connect. T
 runs the EPICS base package and publishes the process variables with the data from the pods on
 its wired network interface.
 
-The **daqpod** subdirectory contains EPICS IOC. 
+The **daqpod** subdirectory contains the EPICS IOC with all prototype and database files, as well as st.cmd. 
