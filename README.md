@@ -8,29 +8,27 @@ Detailed explanations and schematics are available from
   (I'll link to it once it's available from the 'official' repository). 
 
 # The pods with sensor connected to ESP01
+Contents of the different subdirectories
 
-- Temperature pod
-with DS18b20
+- **esp01-18b20:** Temperature pod with DS18b20
 
--  ADC pod
-with MCP3302
+- **esp01-MCP3302:** ADC pod with MCP3302
 
-- DAC pod
-with MCP4922
+- **esp01-MCP4922:** DAC pod with MCP4922
 
-- Magnetic, accelerometer and gyro pod
-uses a MPU-9250 and another one with a MLX90393
+- **esp01-MPU9250:** Magnetic, accelerometer and gyro pod with  a MPU-9250 
 
-- Environmental pod
-with BME280 or BME680
+- **esp01-MLX90393:** Magnetic sensor with a MLX90393
 
-- Digital-IO opd
-with MCP23017
+- **esp01-BME680:** Environmental pod with BME280 or BME680
 
-- Asynchronously triggered IO pin
-with a bare ESP01
+- **esp01-MCP23017:** Digital-IO pod with MCP23017
+
+- **esp01-bare-trigger:** Asynchronously triggered IO pin with a bare ESP01
 
 # The base station with the IOC controller
 Uses a Raspberry Pi that spans its own WLAN network to which the pods connect. The Raspi also
 runs the EPICS base package and publishes the process variables with the data from the pods on
 its wired network interface.
+
+The **daqpod** subdirectory contains EPICS IOC. 
