@@ -1,0 +1,31 @@
+# ./tempApp/Db/BME680.db
+record(stringin, "$(USER):Version") {
+   field(DESC, "Version info")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@BME680.proto get_version $(PORT)")
+}
+record(ai, "$(USER):T") {
+   field(DESC, "Temperature")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@BME680.proto get_temperature $(PORT)")
+}
+record(ai, "$(USER):P") {
+   field(DESC, "Pressure")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@BME680.proto get_pressure $(PORT)")
+}
+record(ai, "$(USER):H") {
+   field(DESC, "Humidity")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@BME680.proto get_humidity $(PORT)")
+}
+record(ai, "$(USER):VOC") {
+   field(DESC, "VolatileOrganicCompounds")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@BME680.proto get_voc $(PORT)")
+}

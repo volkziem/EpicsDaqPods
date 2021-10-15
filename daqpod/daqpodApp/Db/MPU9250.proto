@@ -1,0 +1,10 @@
+# ./daqpodApp/Db/MPU9250.proto
+Terminator = CR LF;
+get_version {out "V?"; in "%#s"; ExtraInput = Ignore;}
+get_temperature {out "T?"; in  "T %f"; ExtraInput = Ignore;}
+get_B {out "B?"; separator=","; in "B %f"; ExtraInput = Ignore; }
+get_ACC {out "ACC?"; separator=","; in "ACC %f"; ExtraInput = Ignore; }
+get_GYRO {out "GYRO?"; separator=","; in "GYRO %f"; ExtraInput = Ignore; }
+set_accrange{out "ACCRANGE %u"; ExtraInput = Ignore;}
+set_gyrorange{out "GYRORANGE %u"; ExtraInput = Ignore;}
+set_dlpf{out "DLPF %u"; ExtraInput = Ignore;}

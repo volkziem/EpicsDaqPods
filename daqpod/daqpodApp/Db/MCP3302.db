@@ -1,0 +1,101 @@
+# ./tempApp/Db/MCP3302.db
+record(stringin, "$(USER):Version") {
+   field(DESC, "Version info")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_version $(PORT)")
+}
+record(ai, "$(USER):CH0") {
+   field(DESC, "Channel 0 (sngl)")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_channel(0) $(PORT)")
+}
+record(ai, "$(USER):CH1") {
+   field(DESC, "Channel 1 (sngl)")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_channel(1) $(PORT)")
+}
+record(ai, "$(USER):CH2") {
+   field(DESC, "Channel 2 (sngl)")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_channel(2) $(PORT)")
+}
+record(ai, "$(USER):CH3") {
+   field(DESC, "Channel 3 (sngl)")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_channel(3) $(PORT)")
+}
+record(ai, "$(USER):CHA") {
+   field(DESC, "Channel A (diff)")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_channel(A) $(PORT)")
+}
+record(ai, "$(USER):CHB") {
+   field(DESC, "Channel B (diff)")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_channel(B) $(PORT)")
+}
+record(waveform, "$(USER):WF0") {
+   field(DESC, "Channel 0 (sngl)")
+   field(SCAN, "10 second")
+   field(NELM,"512")
+   field("FTVL","FLOAT")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_waveform(0) $(PORT)")
+}
+record(waveform, "$(USER):WF1") {
+   field(DESC, "Channel 1 (sngl)")
+   field(SCAN, "10 second")
+   field(NELM,"512")
+   field("FTVL","FLOAT")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_waveform(1) $(PORT)")
+}
+record(waveform, "$(USER):WF2") {
+   field(DESC, "Channel 2 (sngl)")
+   field(SCAN, "10 second")
+   field(NELM,"512")
+   field("FTVL","FLOAT")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_waveform(2) $(PORT)")
+}
+record(waveform, "$(USER):WF3") {
+   field(DESC, "Channel 3 (sngl)")
+   field(SCAN, "10 second")
+   field(NELM,"512")
+   field("FTVL","FLOAT")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_waveform(3) $(PORT)")
+}
+record(waveform, "$(USER):WFA") {
+   field(DESC, "Channel A (diff)")
+   field(SCAN, "10 second")
+   field(NELM,"512")
+   field("FTVL","FLOAT")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_waveform(A) $(PORT)")
+}
+record(waveform, "$(USER):WFB") {
+   field(DESC, "Channel B (diff)")
+   field(SCAN, "10 second")
+   field(NELM,"512")
+   field("FTVL","FLOAT")
+   field(DTYP, "stream")
+   field(INP, "@MCP3302.proto get_waveform(B) $(PORT)")
+}
+record(ao, "$(USER):PERIOD") {
+   field(DESC, "Set sampling period")
+   field(DTYP, "stream")
+   field(OUT, "@MCP3302.proto set_period $(PORT)")
+}
+record(ao, "$(USER):SAMPLES") {
+   field(DESC, "Set sampling period")
+   field(DTYP, "stream")
+   field(OUT, "@MCP3302.proto set_samples $(PORT)")
+}

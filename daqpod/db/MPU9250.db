@@ -1,0 +1,53 @@
+# ./daqpodApp/Db/MPU9250.db
+record(stringin, "$(USER):Version") {
+   field(DESC, "Version info")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MPU9250.proto get_version $(PORT)")
+}
+record(ai, "$(USER):T") {
+   field(DESC, "Temperature")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MPU9250.proto get_temperature $(PORT)")
+}
+record(waveform, "$(USER):B") {
+   field(DESC, "Magnetic field")
+   field(SCAN, "10 second")
+   field(NELM,"3")
+   field("FTVL","FLOAT")
+   field(DTYP, "stream")
+   field(INP, "@MPU9250.proto get_B $(PORT)")
+}
+record(waveform, "$(USER):ACC") {
+   field(DESC, "Acceleration")
+   field(SCAN, "10 second")
+   field(NELM,"3")
+   field("FTVL","FLOAT")
+   field(DTYP, "stream")
+   field(INP, "@MPU9250.proto get_ACC $(PORT)")
+}
+record(waveform, "$(USER):GYRO") {
+   field(DESC, "Acceleration")
+   field(SCAN, "10 second")
+   field(NELM,"3")
+   field("FTVL","FLOAT")
+   field(DTYP, "stream")
+   field(INP, "@MPU9250.proto get_GYRO $(PORT)")
+}
+record(ao, "$(USER):ACCRANGE") {
+   field(DESC, "Range accelerometer")
+   field(DTYP, "stream")
+   field(OUT, "@MPU9250.proto set_accrange $(PORT)")
+}
+record(ao, "$(USER):GYROANGE") {
+   field(DESC, "Range gyro")
+   field(DTYP, "stream")
+   field(OUT, "@MPU9250.proto set_gyrorange $(PORT)")
+}
+record(ao, "$(USER):DLPF") {
+   field(DESC, "Set the DLPF")
+   field(DTYP, "stream")
+   field(OUT, "@MPU9250.proto set_dlpf $(PORT)")
+}
+

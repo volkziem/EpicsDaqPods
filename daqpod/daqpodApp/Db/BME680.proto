@@ -1,0 +1,9 @@
+# ./daqpodApp/Db/BME680.proto
+Terminator = CR LF;
+get_version {out "V?"; in "%#s"; ExtraInput = Ignore;}
+get_temperature {out "T?"; in  "T %f"; ExtraInput = Ignore;}
+get_pressure {out "P?"; in  "P %f"; ExtraInput = Ignore;}
+get_humidity {out "H?"; in  "H %f"; ExtraInput = Ignore;}
+get_voc {out "VOC?"; in  "VOC %f"; ExtraInput = Ignore;}
+
+

@@ -1,0 +1,44 @@
+# ./tempApp/Db/MCP23017.db
+record(stringin, "$(USER):Version") {
+   field(DESC, "Version info")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP23017.proto get_version $(PORT)")
+}
+record(ai, "$(USER):getA") {
+   field(DESC, "Get port")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP23017.proto get(A) $(PORT)")
+}
+
+record(ao, "$(USER):setA") {
+   field(DESC, "Set port")
+   field(DTYP, "stream")
+   field(OUT, "@MCP23017.proto set(A) $(PORT)")
+}
+record(ai, "$(USER):getB") {
+   field(DESC, "Get port")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP23017.proto get(B) $(PORT)")
+}
+record(ao, "$(USER):setB") {
+   field(DESC, "Set port")
+   field(DTYP, "stream")
+   field(OUT, "@MCP23017.proto set(B) $(PORT)")
+}
+
+
+record(ai, "$(USER):getA0") {
+   field(DESC, "Get pin A0")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP23017.proto get(A0) $(PORT)")
+}
+
+record(ao, "$(USER):setA0") {
+   field(DESC, "Set port")
+   field(DTYP, "stream")
+   field(OUT, "@MCP23017.proto set(A0) $(PORT)")
+}

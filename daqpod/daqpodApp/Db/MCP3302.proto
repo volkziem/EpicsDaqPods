@@ -1,0 +1,20 @@
+# ./daqpodApp/Db/MCP3302.proto
+Terminator = CR LF;
+ReplyTimeout = 2000;
+get_version {out "V?"; in "%#s"; ExtraInput = Ignore;}
+get_channel {out "CH\$1?"; in "CH\$1 %f"; ExtraInput = Ignore;}
+get_waveform {out "WF\$1?"; separator=","; in "WF\$1 %f"; ExtraInput = Ignore; }
+set_period {
+  out "PERIOD %u"; ExtraInput = Ignore;
+  @init { out "PERIOD?"; in "PERIOD %f"}
+}
+set_samples {
+  out "SAMPLES %u"; ExtraInput = Ignore;
+  @init { out "SAMPLES?"; in "SAMPLES %f"}
+}
+
+
+#get_period {out "PERIOD?"; in "PERIOD %f"; ExtraInput = Ignore;}
+#get_samples {out "SAMPLES?"; in "SAMPLES %f"; ExtraInput = Ignore;}
+#set_period{out "PERIOD %u"; ExtraInput = Ignore;}
+#set_samples{out "SAMPLES %u"; ExtraInput = Ignore;}

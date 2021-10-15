@@ -1,0 +1,4 @@
+# ./daqpodApp/Db/MCP4922.proto
+Terminator = CR LF;
+get_version {out "V?"; in "%#s"; ExtraInput = Ignore;}
+set_DAC{out "DAC\$1 %u"; ExtraInput = Ignore;}

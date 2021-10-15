@@ -1,0 +1,5 @@
+epicsEnvSet("IOC","iocdaqpod")
+epicsEnvSet("TOP","/home/pi/epics/ioc/daqpod")
+epicsEnvSet("EPICS_BASE","/usr/local/epics/base")
+epicsEnvSet("ASYN","/usr/local/epics/modules/asyn")
+epicsEnvSet("STREAM","/usr/local/epics/modules/stream")

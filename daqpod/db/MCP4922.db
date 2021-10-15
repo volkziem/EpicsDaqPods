@@ -1,0 +1,27 @@
+# ./daqpodApp/Db/MCP4922.db
+record(stringin, "$(USER):Version") {
+   field(DESC, "Version info")
+   field(SCAN, "10 second")
+   field(DTYP, "stream")
+   field(INP, "@MCP4922.proto get_version $(PORT)")
+}
+record(ao, "$(USER):DACA") {
+   field(DESC, "Set DACA")
+   field(DTYP, "stream")
+   field(OUT, "@MCP4922.proto set_DAC(A) $(PORT)")
+}
+record(ao, "$(USER):DACB") {
+   field(DESC, "Set DACB")
+   field(DTYP, "stream")
+   field(OUT, "@MCP4922.proto set_DAC(B) $(PORT)")
+}
+record(ao, "$(USER):DACC") {
+   field(DESC, "Set DACC")
+   field(DTYP, "stream")
+   field(OUT, "@MCP4922.proto set_DAC(C) $(PORT)")
+}
+record(ao, "$(USER):DACD") {
+   field(DESC, "Set DACD")
+   field(DTYP, "stream")
+   field(OUT, "@MCP4922.proto set_DAC(D) $(PORT)")
+}

@@ -1,0 +1,6 @@
+# ./daqpodApp/Db/MCP23017.proto
+Terminator = CR LF;
+ReplyTimeout = 2000;
+get_version {out "V?"; in "%#s"; ExtraInput = Ignore;}
+get {out "\$1?"; in "\$1 %f"; ExtraInput = Ignore;}
+set {out "\$1 %u"; ExtraInput = Ignore;}
