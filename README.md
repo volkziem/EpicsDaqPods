@@ -15,7 +15,7 @@ with MCP3302
 with MCP4922
 
 - Magnetic, accelerometer and gyro pod
-uses a MPU-9250 and another one witha MLX90393
+uses a MPU-9250 and another one with a MLX90393
 
 - Environmental pod
 with BME280 or BME680
