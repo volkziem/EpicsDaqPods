@@ -3,6 +3,8 @@ We describe a system, based on connecting various integrated circuits
 to an ESP01 microcontroller, to flexibly interface analog and digital
 channels to an EPICS control system.
 
+# The pods with sensor connected to ESP01
+
 - Temperature pod
 with DS18b20
 
