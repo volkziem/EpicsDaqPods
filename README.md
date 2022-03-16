@@ -4,8 +4,9 @@ to an ESP01 microcontroller, to flexibly interface analog and digital
 channels to an EPICS control system.
 
 Detailed explanations and schematics are available from
- - V. Ziemann , *EPICS Data Acquisition Pods*, FREIA Report 2021-04, October 2021
-  (I'll link to it once it's available from the 'official' repository). 
+ - V. Ziemann , *EPICS Data Acquisition Pods*, FREIA Report 2021-04, October 2021,
+   [link](http://urn.kb.se/resolve?urn=urn%3Anbn%3Ase%3Auu%3Adiva-456234).
+  
 
 # The pods with sensor connected to ESP01
 Contents of the different subdirectories
