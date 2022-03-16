@@ -4,8 +4,11 @@ to an ESP01 microcontroller, to flexibly interface analog and digital
 channels to an EPICS control system.
 
 Detailed explanations and schematics are available from
- - V. Ziemann , *EPICS Data Acquisition Pods*, FREIA Report 2021-04, October 2021,
-   [(link)](http://urn.kb.se/resolve?urn=urn%3Anbn%3Ase%3Auu%3Adiva-456234).
+ - V. Ziemann , *EPICS Data Acquisition Pods*,[FREIA Report 2021-04](http://urn.kb.se/resolve?urn=urn%3Anbn%3Ase%3Auu%3Adiva-456234), October 2021.
+
+Here is a image illustrating how to wire an MCP3302 ADC to the ESP01.
+
+  ![image](ESP01-MCP3302.png)
   
 
 # The pods with sensor connected to ESP01
